@@ -3,9 +3,13 @@ import { Expense } from './components/Expenses/Expense';
 import { NewExpense } from './components/NewExpense/NewExpense';
 
 const App = () => {
+  const onSubmitExpenseDataHandler = (enteredExpenseData) => {
+    console.log(enteredExpenseData);
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onSubmitExpenseData={onSubmitExpenseDataHandler} />
       <Expense myExpenses={expenses} />
     </div>
   );
