@@ -30,9 +30,9 @@ export const ExpenseForm = (props) => {
         event.preventDefault();
 
         const expenseData = {
-            title: changedUserInput.enteredTitle,
-            date: new Date(changedUserInput.enteredDate),
-            amount: changedUserInput.enteredAmount
+            expenseTitle: changedUserInput.enteredTitle,
+            expenseDate: new Date(changedUserInput.enteredDate),
+            expenseAmount: changedUserInput.enteredAmount
         }
 
         props.onSubmitExpenseData(expenseData);
